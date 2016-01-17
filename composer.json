@@ -1,0 +1,23 @@
+{
+    "name": "edgar-orozco/laravel-menus",
+    "description": "Database Driven Hierarchical Laravel Menu",
+    "authors": [
+        {
+            "name": "Edgar Orozco",
+            "email": "edgar.orozco@bxd.mx"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-0": {
+            "EdgarOrozco\\LaravelMenus\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
