@@ -36,11 +36,10 @@ class LaravelMenusServiceProvider extends ServiceProvider {
 		 */
 		$this->app->bind('Menu', function () {
 
-			$items = Menu::tree();
-
 			//Si no existe el arreglo de plantillas de menú en la sesión entonces creamos el arreglo en las plantillas
 			$menu = Session::get('menu');
 			if (!$menu) {
+				$items = Menu::tree();
 				$menu = View::make('laravel-menus::layouts._nav', compact('items'))->render();
 				Session::put('menu', $menu);
 			}
